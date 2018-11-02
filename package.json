@@ -8,7 +8,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Carson Bain",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.3.1",
