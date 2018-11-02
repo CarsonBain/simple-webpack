@@ -7,34 +7,34 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
-	},
-	devServer: {
+  },
+  devServer: {
     contentBase: "./dist"
   },
-	module: {
+  module: {
     rules: [
       {
         test: /\.scss$/,
         use:
           [
-						'style-loader',
-						MiniCssExtractPlugin.loader,
-						'css-loader',
-						'postcss-loader',
-						'sass-loader'
+            'style-loader',
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
           ]
       }
     ]
-	},
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'style.css'
-		}),
-		new HtmlWebpackPlugin({
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
+    new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
     })
-	]
+  ]
 };
