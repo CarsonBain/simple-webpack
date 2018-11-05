@@ -23,6 +23,30 @@ module.exports = {
             'postcss-loader',
             'sass-loader'
           ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/img/',
+              publicPath: 'assets/img/'
+          }
+        }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/fonts/',
+              publicPath: 'assets/fonts/'
+          }
+        }
+        ]
       }
     ]
   },
