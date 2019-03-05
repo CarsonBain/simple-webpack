@@ -1,28 +1,27 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {main: './src/index.js'},
+  entry: { main: './src/js/index.js' },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: "./dist"
+    contentBase: './dist'
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use:
-          [
-            'style-loader',
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+        use: [
+          'style-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -32,8 +31,8 @@ module.exports = {
             options: {
               outputPath: 'assets/img/',
               publicPath: 'assets/img/'
+            }
           }
-        }
         ]
       },
       {
@@ -44,8 +43,8 @@ module.exports = {
             options: {
               outputPath: 'assets/fonts/',
               publicPath: 'assets/fonts/'
+            }
           }
-        }
         ]
       }
     ]
