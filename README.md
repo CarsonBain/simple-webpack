@@ -24,10 +24,5 @@ Build the current application
 $ npm run build
 ```
 
-## Tips
-This setup uses [file-loader](https://github.com/webpack-contrib/file-loader) which means that you should require your images like this 
-```html
-<img src=<%=require("./src/assets/logo.png")%>>
-```
 ### References
 Built using some of the methods explained here <https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1>
